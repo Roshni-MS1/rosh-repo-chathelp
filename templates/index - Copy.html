@@ -64,10 +64,25 @@
         </form> 
         {% if output %}
             <p><br>
+                <div style="font-size:15pt;color:blueviolet"><center>Response:</center></div> </p>
+            <div id="output-box">
+                {{ output }}
+                {{policy_object}}
+            </div>
+        {% endif %}
+        {% if output %}
+            <p><br>
                 <div style="font-size:15pt;color:blueviolet"><center>Sensitive data identified by LLM</center></div> </p>
             <div id="output-box">
                 {{ output }}
+                {{policy_object}}
             </div>
         {% endif %}
+        <p style="margin-bottom: 10%">
+            <div style="font-size:12pt;color:blue"><left>Configured Policies</left></div>
+            <div style="font-size:12pt;color:blue; margin-left: 4%"><left>{{ policy1 }}</left></div>
+            <div style="font-size:12pt;color:blue; margin-left: 4%"><left>{{ policy2 }}</left></div>
+            <div style="font-size:12pt;color:blue; margin-left: 4%"><left>{{ policy3 }}</left></div> 
+        </p>
     </body>
 </html>
