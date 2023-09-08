@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Purview App- Search</title>
+        <style>
+            #output-box {
+                border: 1px solid blueviolet;
+                font-size:10pt;
+                height:80px;
+                width:80%;
+                padding: 10px;
+                margin-left: 10%;
+                margin-top: 5px;
+            }
+            #output-box-small {
+                border: 1px solid blueviolet;
+                font-size:10pt;
+                height:40px;
+                width:80%;
+                padding: 10px;
+                margin-left: 10%;
+                margin-top: 5px;
+            }
+            #txtbox
+            {
+                border: 1px solid blueviolet;
+                font-size:10pt;
+                height:50px;
+                width: 80%;
+                padding: 10px;
+                margin-left: 10%;
+                margin-top: 5px;
+            }
+
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            }
+
+            /* Bottom right text */
+            .text-block {
+                border: 1px solid rgb(247, 227, 227);
+                position: absolute;
+                top: 15%;
+                left: 47%;
+                background-color: none;
+                color: white;
+                padding-left: 0px;
+                padding-right: 0px;
+                box-shadow: 2px  2px 2px rgb(239, 239, 248);
+            }
+            /* Top left text */
+            .top-left {
+                position: relative;
+                top: 10%;
+                left: 50%;
+            }
+        </style>
+    </head> 
+    <body>
+        <form method="post">
+            <div class="container">
+                <img src="./static/img4.png" alt="Image" style="width:100%;">
+                <div class="top-left">Top Left</div>
+                <div class="text-block">
+                    <input type="text" placeholder="Enter text here">
+                </div>
+                
+            </div>
+    </body>
+</html>

@@ -2,15 +2,16 @@ import pinecone
 from tqdm.auto import tqdm
 import datetime
 from time import sleep
+from purreaddocs import *
 
  #pinecone initialize index
- def purpineconeinitindex():
-    index_name = 'gpt-4-langchain-docs'
+def purpineconeinitindex():
+    index_name = 'p_monocle'
 
     # initialize connection to pinecone
     pinecone.init(
-        api_key="PINECONE_API_KEY",  # app.pinecone.io (console)
-        environment="PINECONE_ENVIRONMENT"  # next to API key in console
+        api_key= readpineconekey(),  # app.pinecone.io (console)
+        environment="asia-southeast1-gcp-free"  # next to API key in console
     )
 
     # check if index already exists (it shouldn't if this is first time)

@@ -18,6 +18,16 @@ tokenizer = tiktoken.get_encoding('p50k_base')
 
 app = Flask(__name__)
 
+@app.before_first_request
+def my_func():
+   print("before first request")
+
+#Call function at end of flask app
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+    print("shutdown session")
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     
